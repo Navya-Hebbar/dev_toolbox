@@ -5,7 +5,7 @@
 
 ### 1. **Clone the repository**
 ```sh
-git clone https://github.com/yourusername/dev_toolbox.git
+git clone https://github.com/Navya-Hebbar/dev_toolbox.git
 cd dev_toolbox
 ```
 
