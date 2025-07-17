@@ -114,5 +114,3 @@ The frontend will start on [http://localhost:3000](http://localhost:3000).
 - [Express](https://expressjs.com/)
 
 ---
-
-> Made with ❤️ for developer productivity!

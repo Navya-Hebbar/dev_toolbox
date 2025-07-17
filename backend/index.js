@@ -39,5 +39,9 @@ app.post('/decode', (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Dev Toolbox API is running!');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
