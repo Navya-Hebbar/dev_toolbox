@@ -110,7 +110,7 @@ The frontend will start on [http://localhost:3000](http://localhost:3000).
 
 ## Live Demo
 
-- **de (Netlify):** [https://developtool.netlify.app/](https://developtool.netlify.app/)
+- **Frontend (Netlify):** [https://developtool.netlify.app/](https://developtool.netlify.app/)
 - **Backend (Render):** [https://dev-toolbox-ep15.onrender.com/](https://dev-toolbox-ep15.onrender.com/)
 
 ---
