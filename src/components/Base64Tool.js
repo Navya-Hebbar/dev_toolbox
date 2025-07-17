@@ -16,7 +16,8 @@ function Base64Tool() {
     setOutput("");
     setShowSuccess(false);
     try {
-      const response = await fetch("http://localhost:5000/encode", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      const response = await fetch(`${apiUrl}/encode`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: input }),
@@ -39,7 +40,8 @@ function Base64Tool() {
     setOutput("");
     setShowSuccess(false);
     try {
-      const response = await fetch("http://localhost:5000/decode", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      const response = await fetch(`${apiUrl}/decode`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ base64: input }),
