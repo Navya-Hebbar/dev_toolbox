@@ -10,17 +10,26 @@ function JsonFormatter() {
   const [error, setError] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleFormat = () => {
+  const handleFormat = async () => {
+    setError("");
+    setShowSuccess(false);
+    setOutput("");
     try {
-      const parsed = JSON.parse(input);
-      setOutput(JSON.stringify(parsed, null, 2));
-      setError("");
-      setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 1500);
-    } catch (e) {
-      setOutput("");
-      setError("Invalid JSON: " + e.message);
-      setShowSuccess(false);
+      const response = await fetch("http://localhost:5000/format-json", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ json: input }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setOutput(data.pretty);
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 1500);
+      } else {
+        setError(data.error || "Unknown error");
+      }
+    } catch (err) {
+      setError("Server error: " + err.message);
     }
   };
 
