@@ -3,7 +3,6 @@ import Lottie from "lottie-react";
 import toolboxAnimation from "../lotties/toolbox.json";
 import successAnimation from "../lotties/success.json";
 import errorAnimation from "../lotties/error.json";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function JsonFormatter() {
   const [input, setInput] = useState("");
@@ -31,8 +30,21 @@ function JsonFormatter() {
     }
   };
 
+  // Glassmorphic style
+  const glassStyle = {
+    maxWidth: 600,
+    margin: "40px auto",
+    background: "rgba(255,255,255,0.25)",
+    borderRadius: "1.5rem",
+    boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.18)",
+    border: "1px solid rgba(255,255,255,0.3)",
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+    padding: "2rem"
+  };
+
   return (
-    <div className="card shadow-lg p-4" style={{ maxWidth: 600, margin: "40px auto", background: "rgba(255,255,255,0.85)" }}>
+    <div className="card shadow-lg" style={glassStyle}>
       <div className="text-center mb-3">
         <Lottie animationData={toolboxAnimation} style={{ width: 80, height: 80 }} loop={true} />
       </div>
