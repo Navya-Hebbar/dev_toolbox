@@ -103,7 +103,7 @@ function Base64Tool() {
         </div>
         {/* Right: Existing UI */}
         <div className="col-md-7 p-4">
-          <h2 className="card-title text-primary text-center mb-3">JSON Formatter</h2>
+          <h2 className="card-title text-primary text-center mb-3">Base64 Tools</h2>
           <textarea
             className="form-control mb-3"
             rows={8}
